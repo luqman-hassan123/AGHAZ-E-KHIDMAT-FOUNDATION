@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme {
+  --color-akf-primary: #7BCCB5;
+  --color-akf-primary-dark: #5FA896;
+  --color-akf-primary-light: #A8E0D4;
+  --color-akf-steampunk: #C9C1C1;
+  --color-akf-steampunk-dark: #374151;
+  --color-akf-steampunk-light: #E8E4E4;
+  --color-akf-on-dark: #F9FAFB;
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: #1f2937;
+  background-color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+p,
+li,
+td {
+  line-height: 1.75;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: #111827;
+}

@@ -4,6 +4,8 @@ import Card from '../ui/Card'
 import MemberAvatar from '../ui/MemberAvatar'
 
 export default function MemberProfileCard({ member, index }) {
+  const hasPhoto = Boolean(member.photo)
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -12,16 +14,29 @@ export default function MemberProfileCard({ member, index }) {
       transition={{ delay: index * 0.08 }}
     >
       <Card className="overflow-hidden p-0 h-full" hover>
-        <div className="relative h-64 overflow-hidden">
+        <div className="relative overflow-hidden aspect-[3/4] w-full">
           <MemberAvatar member={member} />
-          <div className="absolute inset-0 bg-gradient-to-t from-akf-primary-dark/90 via-akf-primary-dark/20 to-transparent" />
-          <div className="absolute bottom-4 left-4 right-4">
-            <p className="text-white/90 text-xs font-semibold uppercase tracking-wider">{member.role}</p>
-            <h3 className="text-white text-lg font-bold leading-snug">{member.name}</h3>
-          </div>
+          {!hasPhoto && (
+            <>
+              <div className="absolute inset-0 bg-gradient-to-t from-akf-primary-dark/90 via-akf-primary-dark/20 to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4">
+                <p className="text-white/90 text-xs font-semibold uppercase tracking-wider">{member.role}</p>
+                <h3 className="text-white text-lg font-bold leading-snug">{member.name}</h3>
+              </div>
+            </>
+          )}
         </div>
 
         <div className="p-6">
+          {hasPhoto && (
+            <div className="mb-4 pb-4 border-b border-akf-steampunk">
+              <p className="text-akf-primary-dark text-xs font-semibold uppercase tracking-wider mb-1">
+                {member.role}
+              </p>
+              <h3 className="text-gray-900 text-lg font-bold leading-snug">{member.name}</h3>
+            </div>
+          )}
+
           <p className="text-akf-primary-dark font-semibold text-sm mb-3 leading-snug">{member.occupation}</p>
           <p className="text-gray-700 text-sm leading-relaxed mb-4">{member.bio}</p>
 
@@ -53,7 +68,7 @@ export default function MemberProfileCard({ member, index }) {
           )}
 
           <div className="flex flex-wrap gap-2">
-            {member.expertise.map((skill) => (
+            {(member.expertise ?? []).map((skill) => (
               <span
                 key={skill}
                 className="px-2.5 py-1 rounded-md bg-akf-primary-soft text-akf-primary-dark text-xs font-medium"

@@ -11,7 +11,7 @@ export default function Footer() {
       <div className="container mx-auto px-6 py-12">
         <div className="grid md:grid-cols-3 gap-8">
           <div>
-            <BrandLockup variant="dark" className="mb-4" />
+            <BrandLockup variant="dark" largeLogo className="mb-4" />
             <p className="leading-relaxed">
               Serving communities across Khyber Pakhtunkhwa with transparent, accountable programmes.
             </p>

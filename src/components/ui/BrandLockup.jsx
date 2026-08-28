@@ -1,9 +1,11 @@
-export default function BrandLockup({ variant = 'light', className = '', showTagline = true, compact = false }) {
+export default function BrandLockup({ variant = 'light', className = '', showTagline = true, compact = false, largeLogo = false }) {
   const isDark = variant === 'dark'
 
   const frameClass = compact
     ? 'h-[3.125rem] w-[3.125rem] sm:h-14 sm:w-14'
-    : 'h-9 w-9 sm:h-11 sm:w-11'
+    : largeLogo
+      ? 'h-16 w-16 sm:h-20 sm:w-20'
+      : 'h-9 w-9 sm:h-11 sm:w-11'
 
   const emblemClass = compact ? 'w-[175%] top-[3%]' : 'w-[170%] top-[3%]'
 

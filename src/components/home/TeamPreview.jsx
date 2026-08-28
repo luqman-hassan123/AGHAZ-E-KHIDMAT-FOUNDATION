@@ -18,7 +18,7 @@ export default function TeamPreview() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
           {preview.map((member) => (
             <Card key={member.id} className="overflow-hidden p-0 text-center h-full">
-              <div className="h-56 sm:h-60 md:h-64">
+              <div className="aspect-[3/4] w-full">
                 <MemberAvatar member={member} />
               </div>
               <div className="p-4">

@@ -11,7 +11,7 @@ export default function PillarCard({ pillar, index }) {
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
     >
-      <Card className="h-full hover:border-akf-primary transition-colors duration-300">
+      <Card className="h-full">
         <div className="w-14 h-14 rounded-full bg-akf-primary-soft flex items-center justify-center mb-4">
           <Icon className="w-7 h-7 text-akf-primary-dark" />
         </div>

@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 
 export default function PageHero({ title, subtitle, image = '/images/malakand.svg' }) {
   return (
-    <section className="relative -mt-16 pt-20 md:pt-24 min-h-[280px] md:min-h-[320px] flex items-end overflow-hidden bg-akf-primary-dark">
+    <section className="relative -mt-[4.75rem] pt-[5.25rem] md:pt-24 min-h-[280px] md:min-h-[320px] flex items-end overflow-hidden bg-akf-primary-dark">
       <img
         src={image}
         alt=""

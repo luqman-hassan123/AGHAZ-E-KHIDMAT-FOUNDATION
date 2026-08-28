@@ -3,6 +3,7 @@ import SectionHeading from '../components/ui/SectionHeading'
 import SectionDivider from '../components/ui/SectionDivider'
 import AnimatedSection from '../components/ui/AnimatedSection'
 import Card from '../components/ui/Card'
+import RegistrationCertificate from '../components/about/RegistrationCertificate'
 import { legalStatus, crossCutting } from '../data/governance'
 import { foundingStory, orgTimeline, orgHighlights, aboutGallery } from '../data/about'
 import { Eye, Target, CheckCircle } from 'lucide-react'
@@ -122,6 +123,14 @@ export default function About() {
               </AnimatedSection>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-akf-steampunk-light section-pattern">
+        <div className="container mx-auto px-6">
+          <AnimatedSection>
+            <RegistrationCertificate />
+          </AnimatedSection>
         </div>
       </section>
 

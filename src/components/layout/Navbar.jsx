@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
+import BrandLockup from '../ui/BrandLockup'
 import { navLinks } from '../../data/navigation'
 
 export default function Navbar() {
@@ -14,17 +15,11 @@ export default function Navbar() {
     }`
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-akf-steampunk shadow-sm">
-      <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between h-16">
-          <Link to="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-full bg-akf-primary flex items-center justify-center text-white font-bold">
-              AKF
-            </div>
-            <div>
-              <p className="font-bold text-akf-primary-dark leading-tight">Aghaz-e-Khidmat</p>
-              <p className="text-xs text-gray-600 font-medium">Foundation</p>
-            </div>
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-akf-steampunk shadow-sm overflow-visible">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="flex items-center justify-between min-h-16 md:min-h-[4.5rem] py-2 gap-3">
+          <Link to="/" className="flex items-center shrink-0 overflow-visible max-w-[calc(100%-3rem)] sm:max-w-none">
+            <BrandLockup compact />
           </Link>
 
           <div className="hidden lg:flex items-center gap-1">

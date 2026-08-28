@@ -17,8 +17,8 @@ export const orgContact = {
   primaryPhone: '03335333948',
   primaryPhoneDisplay: '0333 5333948',
   primaryEmail: 'Mehrunisa.dgpc@gmail.com',
-  notes: {
-    officialEmail: 'AKF official email account — to be established',
-    linkedIn: 'LinkedIn account — to be established',
+  linkedIn: {
+    label: 'LinkedIn Profile',
+    url: '', // Add AKF LinkedIn URL here when available
   },
 }

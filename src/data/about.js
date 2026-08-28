@@ -7,7 +7,7 @@ export const orgTimeline = [
   {
     year: '2026',
     title: 'Registration Under Societies Act',
-    description: 'Application submitted and registration completed under the Societies Registration Act, 1860.',
+    description: 'Registered under the Societies Registration Act, 1860 — Registration No. 1056, dated 18 August 2026.',
   },
   {
     year: '2026',

@@ -1,7 +1,7 @@
 export const orgStats = [
   { value: '6', label: 'Thematic Focus Areas', description: 'Aligned with UN SDGs' },
   { value: '7', label: 'Founding Members', description: 'Lawyers & social workers' },
-  { value: '1860', label: 'Registration Act', description: 'Legally structured NGO' },
+  { value: '1056', label: 'Registration No.', description: 'Societies Act 1860' },
   { value: 'KP', label: 'Province Coverage', description: 'Khyber Pakhtunkhwa' },
 ]
 
@@ -34,7 +34,7 @@ export const workAreas = [
 export const trustHighlights = [
   {
     title: 'Registered Organization',
-    description: 'Registered under the Societies Registration Act, 1860 with a formally adopted Constitution.',
+    description: 'Registered under the Societies Registration Act, 1860 — Registration No. 1056.',
   },
   {
     title: 'SECP-Approved Audit',

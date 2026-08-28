@@ -16,14 +16,25 @@ export const accountabilityPoints = [
 
 export const legalStatus = [
   { label: 'Legal form', value: 'Non-profit, non-political, non-governmental, voluntary social welfare organization' },
-  { label: 'Registration', value: 'Application submitted under the Societies Registration Act, 1860' },
+  { label: 'Registration', value: 'Registered under the Societies Registration Act, 1860 (Act XXI of 1860)' },
+  { label: 'Registration No.', value: '1056' },
+  { label: 'Date of registration', value: '18 August 2026' },
+  { label: 'Issuing authority', value: 'Provincial Registrar, Joint Stock Companies & Societies, Khyber Pakhtunkhwa, Peshawar' },
   { label: 'Registered address', value: 'Village Musa Mina, Post Office Dargai, Malakand Division, Khyber Pakhtunkhwa' },
   { label: 'Area of operation', value: 'Khyber Pakhtunkhwa' },
   { label: 'Financial year', value: '1 July to 30 June' },
 ]
 
+export const registrationInfo = [
+  { label: 'Organization', value: 'Aghaz-e-Khidmat Foundation (AKF)' },
+  { label: 'Registration No.', value: '1056' },
+  { label: 'Registered on', value: '18 August 2026' },
+  { label: 'Act', value: 'Societies Registration Act, 1860 (Act XXI of 1860)' },
+  { label: 'Address', value: 'Village Musa Mina, Post Office Dargai, Malakand District, KPK' },
+]
+
 export const partnerReasons = [
-  'Legally structured non-profit with formally adopted Constitution and governance rules.',
+  'Legally structured non-profit, registered under the Societies Registration Act, 1860 (Reg. No. 1056), with a formally adopted Constitution and governance rules.',
   'Governance built on checks and balances with elected Executive Committee and accountable General Body.',
   'Founding team combining legal, social work and community-mobilization experience in Malakand Division.',
   'Committed financial controls: joint signatories, annual budget approval, and independent SECP audit.',

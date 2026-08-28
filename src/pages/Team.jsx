@@ -1,37 +1,39 @@
+import PageHero from '../components/ui/PageHero'
+import SectionDivider from '../components/ui/SectionDivider'
 import SectionHeading from '../components/ui/SectionHeading'
 import AnimatedSection from '../components/ui/AnimatedSection'
-import Card from '../components/ui/Card'
+import MemberProfileCard from '../components/team/MemberProfileCard'
 import { foundingMembers } from '../data/members'
 
 export default function Team() {
   return (
-    <div className="py-20 min-h-screen">
-      <div className="container mx-auto px-6">
-        <SectionHeading
-          title="Founding Members"
-          subtitle="Seven founding members spanning law and grassroots social work"
-        />
+    <>
+      <PageHero
+        title="Founding Members"
+        subtitle="Lawyers and social workers who established AKF and form the initial Executive Committee"
+        image="/images/community.svg"
+      />
+      <SectionDivider />
 
-        <AnimatedSection className="mb-10">
-          <p className="text-center text-gray-700 max-w-3xl mx-auto">
-            The founding members form the initial Executive Committee for a term of three years, after which office bearers are elected by the General Body by secret ballot.
-          </p>
-        </AnimatedSection>
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-6">
+          <AnimatedSection className="mb-12">
+            <SectionHeading
+              title="Our Founding Team"
+              subtitle="Seven dedicated professionals combining legal governance with grassroots community experience"
+            />
+            <p className="text-center text-gray-700 max-w-3xl mx-auto -mt-6 leading-relaxed">
+              The founding members form the initial Executive Committee for a term of three years, after which office bearers are elected by the General Body through secret ballot. Male and female members are shown with distinct placeholder icons until official photos are added.
+            </p>
+          </AnimatedSection>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {foundingMembers.map((member, index) => (
-            <AnimatedSection key={member.name} delay={index * 0.05}>
-              <Card className="text-center h-full">
-                <div className="w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-akf-primary to-akf-primary-dark flex items-center justify-center text-white text-2xl font-bold mb-4">
-                  {member.name.charAt(0)}
-                </div>
-                <h3 className="font-bold text-gray-800 mb-1">{member.name}</h3>
-                <p className="text-akf-primary-dark text-sm font-medium">{member.occupation}</p>
-              </Card>
-            </AnimatedSection>
-          ))}
+          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+            {foundingMembers.map((member, index) => (
+              <MemberProfileCard key={member.id} member={member} index={index} />
+            ))}
+          </div>
         </div>
-      </div>
-    </div>
+      </section>
+    </>
   )
 }

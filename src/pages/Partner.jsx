@@ -1,4 +1,5 @@
-import SectionHeading from '../components/ui/SectionHeading'
+import PageHero from '../components/ui/PageHero'
+import SectionDivider from '../components/ui/SectionDivider'
 import AnimatedSection from '../components/ui/AnimatedSection'
 import Card from '../components/ui/Card'
 import Button from '../components/ui/Button'
@@ -12,13 +13,16 @@ import { CheckCircle } from 'lucide-react'
 
 export default function Partner() {
   return (
-    <div className="py-20 bg-akf-steampunk-light min-h-screen">
-      <div className="container mx-auto px-6">
-        <SectionHeading
-          title="Partner With AKF"
-          subtitle="Join us in delivering measurable, sustainable results across Khyber Pakhtunkhwa"
-        />
+    <>
+      <PageHero
+        title="Partner With AKF"
+        subtitle="Join us in delivering measurable, sustainable results across Khyber Pakhtunkhwa"
+        image="/images/malakand.svg"
+      />
+      <SectionDivider />
 
+    <div className="py-20 bg-akf-steampunk-light min-h-screen section-pattern">
+      <div className="container mx-auto px-6">
         <AnimatedSection className="mb-12">
           <Card>
             <h3 className="text-2xl font-bold mb-6">Why Partner With Us</h3>
@@ -78,5 +82,6 @@ export default function Partner() {
         </div>
       </div>
     </div>
+    </>
   )
 }

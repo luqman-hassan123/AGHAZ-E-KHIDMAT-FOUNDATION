@@ -9,7 +9,7 @@ export default function AboutIntro() {
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <AnimatedSection>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800">Who We Are</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Who We Are</h2>
             <div className="w-16 h-1 bg-akf-primary mt-3 rounded-full" />
             <p className="mt-4 text-lg text-gray-700 mb-6">
               A newly established organization rooted in Malakand Division, built for transparent community service
@@ -19,9 +19,9 @@ export default function AboutIntro() {
                 Aghaz-e-Khidmat Foundation (AKF) is a non-profit, non-political, and voluntary social welfare organization founded by lawyers and social workers to serve communities across Khyber Pakhtunkhwa — beginning in Malakand Division.
               </p>
               <p className="text-gray-700 leading-relaxed mb-6">
-                With a formally adopted Constitution, Memorandum, and strong governance framework, AKF is ready to partner with donors, government departments, and international organizations to deliver education, health, disaster response, environmental protection, and inclusive community development programmes.
+                Visit our About page for our full story, vision, mission, legal status, founding timeline, and organizational profile.
               </p>
-              <Button to="/about">Read Full Profile</Button>
+              <Button to="/about">About Us</Button>
             </div>
           </AnimatedSection>
 
@@ -30,39 +30,48 @@ export default function AboutIntro() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="grid gap-4"
+            className="space-y-4"
           >
-            <div className="bg-akf-steampunk-light rounded-2xl p-6 border border-akf-steampunk flex gap-4">
-              <div className="w-12 h-12 rounded-full bg-akf-primary-light flex items-center justify-center shrink-0">
-                <Scale className="w-6 h-6 text-akf-primary-dark" />
-              </div>
-              <div>
-                <h3 className="font-bold text-gray-800 mb-1">Legal & Governance Foundation</h3>
-                <p className="text-gray-700 text-sm leading-relaxed">
-                  Registered under the Societies Registration Act, 1860 with an Executive Committee and accountable General Body.
-                </p>
-              </div>
+            <div className="rounded-3xl overflow-hidden border border-akf-steampunk shadow-lg">
+              <img
+                src="/images/community.svg"
+                alt="AKF community service"
+                className="w-full h-48 object-cover"
+              />
             </div>
-            <div className="bg-akf-primary-light rounded-2xl p-6 border border-akf-primary flex gap-4">
-              <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center shrink-0">
-                <Users className="w-6 h-6 text-akf-primary-dark" />
+            <div className="grid gap-4">
+              <div className="bg-akf-primary-soft rounded-2xl p-5 border border-akf-primary/20 flex gap-4">
+                <div className="w-12 h-12 rounded-full bg-akf-primary flex items-center justify-center shrink-0">
+                  <Scale className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-gray-900 mb-1">Legal & Governance Foundation</h3>
+                  <p className="text-gray-700 text-sm leading-relaxed">
+                    Registered under the Societies Registration Act, 1860 with an Executive Committee and accountable General Body.
+                  </p>
+                </div>
               </div>
-              <div>
-                <h3 className="font-bold text-gray-800 mb-1">Experienced Founding Team</h3>
-                <p className="text-akf-primary-dark text-sm leading-relaxed font-medium">
-                  Seven founding members combining legal expertise, social work, and grassroots community mobilization.
-                </p>
+              <div className="bg-akf-primary rounded-2xl p-5 flex gap-4 text-white">
+                <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center shrink-0">
+                  <Users className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="font-bold mb-1">Experienced Founding Team</h3>
+                  <p className="text-gray-100 text-sm leading-relaxed">
+                    Seven founding members combining legal expertise, social work, and grassroots community mobilization.
+                  </p>
+                </div>
               </div>
-            </div>
-            <div className="bg-akf-primary-dark rounded-2xl p-6 flex gap-4 text-white">
-              <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center shrink-0">
-                <MapPin className="w-6 h-6 text-white" />
-              </div>
-              <div>
-                <h3 className="font-bold mb-1">Grassroots Local Presence</h3>
-                <p className="text-gray-100 text-sm leading-relaxed">
-                  Based in Village Musa Mina, Dargai — with direct access to underserved communities in Malakand Division.
-                </p>
+              <div className="bg-akf-primary-dark rounded-2xl p-5 flex gap-4 text-white">
+                <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center shrink-0">
+                  <MapPin className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="font-bold mb-1">Grassroots Local Presence</h3>
+                  <p className="text-gray-100 text-sm leading-relaxed">
+                    Based in Village Musa Mina, Dargai — with direct access to underserved communities in Malakand Division.
+                  </p>
+                </div>
               </div>
             </div>
           </motion.div>

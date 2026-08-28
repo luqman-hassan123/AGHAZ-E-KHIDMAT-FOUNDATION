@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { MapPin, Mail, Phone } from 'lucide-react'
 import { navLinks } from '../../data/navigation'
+import { orgContact } from '../../data/contact'
 
 export default function Footer() {
   return (
@@ -32,15 +33,19 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start gap-2">
                 <MapPin size={18} className="mt-1 shrink-0" />
-                <span>Village Musa Mina, Post Office Dargai, Malakand Division, Khyber Pakhtunkhwa, Pakistan</span>
+                <span>{orgContact.address}</span>
               </li>
               <li className="flex items-center gap-2">
-                <Phone size={18} />
-                <span>Contact number: ____________________</span>
+                <Phone size={18} className="shrink-0" />
+                <a href={`tel:+92${orgContact.primaryPhone.replace(/^0/, '')}`} className="hover:text-white transition-colors">
+                  {orgContact.primaryPhoneDisplay}
+                </a>
               </li>
-              <li className="flex items-center gap-2">
-                <Mail size={18} />
-                <span>Email: ____________________</span>
+              <li className="flex items-start gap-2">
+                <Mail size={18} className="mt-1 shrink-0" />
+                <a href={`mailto:${orgContact.primaryEmail}`} className="hover:text-white transition-colors break-all">
+                  {orgContact.primaryEmail}
+                </a>
               </li>
             </ul>
           </div>

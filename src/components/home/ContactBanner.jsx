@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { Mail, Phone } from 'lucide-react'
 import Button from '../ui/Button'
+import { orgContact } from '../../data/contact'
 
 export default function ContactBanner() {
   return (
@@ -36,13 +37,13 @@ export default function ContactBanner() {
               </Button>
             </div>
 
-            <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-100 font-medium">
-              <span className="flex items-center gap-2">
-                <Phone className="w-4 h-4" /> Contact number: ____________________
-              </span>
-              <span className="flex items-center gap-2">
-                <Mail className="w-4 h-4" /> Email: ____________________
-              </span>
+            <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-4 sm:gap-6 text-sm text-gray-100 font-medium">
+              <a href={`tel:+92${orgContact.primaryPhone.replace(/^0/, '')}`} className="flex items-center justify-center gap-2 hover:text-white">
+                <Phone className="w-4 h-4" /> {orgContact.primaryPhoneDisplay}
+              </a>
+              <a href={`mailto:${orgContact.primaryEmail}`} className="flex items-center justify-center gap-2 hover:text-white break-all">
+                <Mail className="w-4 h-4" /> {orgContact.primaryEmail}
+              </a>
             </div>
           </div>
         </motion.div>

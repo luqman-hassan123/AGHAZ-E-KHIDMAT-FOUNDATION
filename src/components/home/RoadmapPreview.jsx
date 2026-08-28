@@ -31,7 +31,7 @@ export default function RoadmapPreview() {
 
               <div className="md:w-1/2 pl-14 sm:pl-0">
                 <div className="bg-white rounded-2xl p-6 border border-akf-steampunk shadow-sm hover:border-akf-primary hover:shadow-md transition-all duration-300">
-                  <span className="inline-block px-3 py-1 rounded-full bg-akf-primary-light text-akf-primary-dark text-xs font-bold mb-3">
+                  <span className="inline-block px-3 py-1 rounded-full bg-akf-primary-soft text-akf-primary-dark text-xs font-bold mb-3">
                     Step {index + 1}
                   </span>
                   <h3 className="text-lg font-bold text-gray-800 mb-2">{item.title}</h3>

@@ -1,9 +1,10 @@
 @import "tailwindcss";
 
 @theme {
-  --color-akf-primary: #7BCCB5;
-  --color-akf-primary-dark: #5FA896;
-  --color-akf-primary-light: #A8E0D4;
+  --color-akf-primary: #3D8B7A;
+  --color-akf-primary-dark: #2A6B5C;
+  --color-akf-primary-light: #5BA896;
+  --color-akf-primary-soft: #E8F4F1;
   --color-akf-steampunk: #C9C1C1;
   --color-akf-steampunk-dark: #374151;
   --color-akf-steampunk-light: #E8E4E4;
@@ -40,4 +41,9 @@ h2,
 h3,
 h4 {
   color: #111827;
+}
+
+.section-pattern {
+  background-image: radial-gradient(circle at 1px 1px, rgba(61, 139, 122, 0.08) 1px, transparent 0);
+  background-size: 24px 24px;
 }

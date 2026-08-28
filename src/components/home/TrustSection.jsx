@@ -23,7 +23,7 @@ export default function TrustSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="text-center p-6 rounded-2xl bg-akf-steampunk-light border border-akf-steampunk hover:bg-akf-primary-light hover:border-akf-primary transition-all duration-300 group"
+                className="text-center p-6 rounded-2xl bg-akf-steampunk-light border border-akf-steampunk hover:bg-akf-primary-soft hover:border-akf-primary transition-all duration-300 group"
               >
                 <div className="w-14 h-14 mx-auto rounded-full bg-white group-hover:bg-akf-primary flex items-center justify-center mb-4 transition-colors duration-300">
                   <Icon className="w-7 h-7 text-akf-primary-dark group-hover:text-white transition-colors duration-300" />

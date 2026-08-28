@@ -1,30 +1,44 @@
-import SectionHeading from '../components/ui/SectionHeading'
-import PillarCard from '../components/ui/PillarCard'
+import PageHero from '../components/ui/PageHero'
+import SectionDivider from '../components/ui/SectionDivider'
 import AnimatedSection from '../components/ui/AnimatedSection'
 import Card from '../components/ui/Card'
+import FocusAreaDetail from '../components/focus/FocusAreaDetail'
 import { pillars } from '../data/pillars'
 
 export default function FocusAreas() {
   return (
-    <div className="py-20 min-h-screen">
-      <div className="container mx-auto px-6">
-        <SectionHeading
-          title="Thematic Focus Areas"
-          subtitle="Six pillars mapping onto government priorities and UN Sustainable Development Goals"
-        />
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+    <>
+      <PageHero
+        title="Thematic Focus Areas"
+        subtitle="Six programme pillars with detailed activities, SDG alignment, and community interventions across Khyber Pakhtunkhwa"
+        image="/images/malakand.svg"
+      />
+      <SectionDivider />
+
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-6">
+          <AnimatedSection>
+            <Card className="bg-akf-primary-soft border-akf-primary/20 max-w-4xl mx-auto text-center">
+              <p className="text-gray-700 leading-relaxed">
+                AKF&apos;s Constitution sets out a broad mandate for community welfare. Below are our six thematic pillars — each with programme activities aligned to national priorities and UN Sustainable Development Goals. We also deliver family planning services, recreational programmes, and lawful development activities that advance civic rights awareness.
+              </p>
+            </Card>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      <section className="py-12 bg-akf-steampunk-light section-pattern">
+        <div className="container mx-auto px-6 space-y-12">
           {pillars.map((pillar, index) => (
-            <PillarCard key={pillar.title} pillar={pillar} index={index} />
+            <FocusAreaDetail
+              key={pillar.id}
+              pillar={pillar}
+              index={index}
+              reverse={index % 2 === 1}
+            />
           ))}
         </div>
-        <AnimatedSection>
-          <Card className="bg-akf-primary-light border-akf-primary">
-            <p className="text-akf-primary-dark leading-relaxed">
-              Within these pillars, AKF is also committed to family planning services, recreational programs that build resilience against anti-social activity, and undertaking any lawful activity that advances development and creates awareness amongst communities of their rights in Pakistan.
-            </p>
-          </Card>
-        </AnimatedSection>
-      </div>
-    </div>
+      </section>
+    </>
   )
 }

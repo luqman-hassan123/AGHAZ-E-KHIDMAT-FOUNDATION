@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 
-export default function Card({ children, className = '', hover = true }) {
+export default function Card({ children, className = '', hover = true, ...props }) {
   return (
     <motion.div
       whileHover={hover ? { y: -6, boxShadow: '0 20px 40px rgba(42, 107, 92, 0.35)' } : {}}
@@ -10,6 +10,7 @@ export default function Card({ children, className = '', hover = true }) {
           ? 'transition-[border-color,box-shadow] duration-300 hover:border-akf-primary hover:shadow-xl'
           : ''
       } ${className}`}
+      {...props}
     >
       {children}
     </motion.div>

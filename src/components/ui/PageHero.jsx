@@ -1,16 +1,28 @@
 import { motion } from 'framer-motion'
 
-export default function PageHero({ title, subtitle, image = '/images/malakand.svg' }) {
+const defaultPageHeroImage = '/images/backgrounds/akf-schools-education.png'
+
+export default function PageHero({ title, subtitle, image = defaultPageHeroImage }) {
+  const isPhoto = /\.(jpe?g|png|webp)$/i.test(image)
+
   return (
     <section className="relative -mt-[4.75rem] pt-[5.25rem] md:pt-24 min-h-[280px] md:min-h-[320px] flex items-end overflow-hidden bg-akf-primary-dark">
       <img
         src={image}
         alt=""
-        className="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-luminosity"
+        className={`absolute inset-0 w-full h-full object-cover ${
+          isPhoto ? '' : 'opacity-40 mix-blend-luminosity'
+        }`}
         aria-hidden="true"
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-akf-primary-dark/95 via-akf-primary-dark/80 to-akf-primary/60" />
-      <div className="absolute inset-0 section-pattern opacity-30" />
+      <div
+        className={`absolute inset-0 ${
+          isPhoto
+            ? 'bg-gradient-to-r from-akf-primary-dark/90 via-akf-primary-dark/75 to-akf-primary/55'
+            : 'bg-gradient-to-r from-akf-primary-dark/95 via-akf-primary-dark/80 to-akf-primary/60'
+        }`}
+      />
+      <div className="absolute inset-0 section-pattern opacity-20" />
 
       <div className="container mx-auto px-6 pb-12 relative z-10">
         <motion.h1

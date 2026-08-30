@@ -16,7 +16,8 @@ export const pillars = [
       'Support for learning materials and community learning spaces',
       'Advocacy for equal access to education for girls and boys',
     ],
-    image: '/images/focus-education.svg',
+    image: '/images/focus/education.jpg',
+    imageFallback: '/images/focus-education.svg',
     accent: 'from-emerald-600 to-teal-700',
   },
   {
@@ -34,7 +35,8 @@ export const pillars = [
       'Maternal and child health awareness programmes',
       'Family planning services and reproductive health education',
     ],
-    image: '/images/focus-health.svg',
+    image: '/images/focus/health.jpg',
+    imageFallback: '/images/focus-health.svg',
     accent: 'from-teal-600 to-cyan-700',
   },
   {
@@ -52,7 +54,8 @@ export const pillars = [
       'School and community safety planning',
       'Coordination with government line departments during emergencies',
     ],
-    image: '/images/focus-disaster.svg',
+    image: '/images/focus/disaster.jpg',
+    imageFallback: '/images/focus-disaster.svg',
     accent: 'from-slate-600 to-teal-800',
   },
   {
@@ -70,7 +73,8 @@ export const pillars = [
       'Promotion of sustainable local resource use',
       'Carbon-conscious community development practices',
     ],
-    image: '/images/focus-environment.svg',
+    image: '/images/focus/environment.jpg',
+    imageFallback: '/images/focus-environment.svg',
     accent: 'from-green-600 to-emerald-800',
   },
   {
@@ -88,7 +92,8 @@ export const pillars = [
       'Community participation and local decision-making forums',
       'Livelihood and skills development for economic inclusion',
     ],
-    image: '/images/focus-community.svg',
+    image: '/images/focus/community.jpg',
+    imageFallback: '/images/focus-community.svg',
     accent: 'from-teal-700 to-green-800',
   },
   {
@@ -106,7 +111,8 @@ export const pillars = [
       'HIV/AIDS awareness and stigma reduction initiatives',
       'Referral support connecting communities with legal and health services',
     ],
-    image: '/images/focus-rights.svg',
+    image: '/images/focus/rights.jpg',
+    imageFallback: '/images/focus-rights.svg',
     accent: 'from-teal-800 to-slate-800',
   },
 ]

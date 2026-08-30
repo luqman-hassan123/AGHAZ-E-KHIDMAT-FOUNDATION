@@ -12,7 +12,6 @@ export default function Governance() {
       <PageHero
         title="Governance Structure"
         subtitle="Clear lines of accountability designed for donor confidence and community trust"
-        image="/images/governance.svg"
       />
       <SectionDivider />
 

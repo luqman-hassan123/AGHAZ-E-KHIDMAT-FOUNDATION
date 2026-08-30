@@ -14,7 +14,6 @@ export default function About() {
       <PageHero
         title="About Aghaz-e-Khidmat Foundation"
         subtitle="Our story, vision, mission, and organizational profile — built for transparent community service in Khyber Pakhtunkhwa"
-        image="/images/community.svg"
       />
       <SectionDivider />
 

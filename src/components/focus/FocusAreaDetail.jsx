@@ -1,8 +1,11 @@
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { CheckCircle } from 'lucide-react'
 
 export default function FocusAreaDetail({ pillar, index, reverse = false }) {
   const Icon = pillar.icon
+  const [imageSrc, setImageSrc] = useState(pillar.image)
+  const isPhoto = /\.(jpe?g|png|webp)$/i.test(imageSrc)
 
   return (
     <motion.article
@@ -11,21 +14,30 @@ export default function FocusAreaDetail({ pillar, index, reverse = false }) {
       viewport={{ once: true, margin: '-60px' }}
       transition={{ duration: 0.6 }}
       id={pillar.id}
-      className={`grid lg:grid-cols-2 gap-0 overflow-hidden rounded-3xl border border-akf-steampunk shadow-lg bg-white transition-[border-color,box-shadow] duration-300 hover:border-akf-primary hover:shadow-2xl`}
+      className={`grid lg:grid-cols-2 gap-0 overflow-hidden rounded-3xl border border-akf-steampunk shadow-md bg-white transition-[border-color,box-shadow] duration-300 hover:border-akf-primary hover:shadow-lg`}
     >
-      <div className={`relative min-h-[260px] lg:min-h-[420px] bg-gradient-to-br ${pillar.accent} ${reverse ? 'lg:order-2' : ''}`}>
+      <div className={`relative min-h-[260px] lg:min-h-[420px] ${reverse ? 'lg:order-2' : ''} ${
+        isPhoto ? 'bg-akf-primary-soft' : `bg-gradient-to-br ${pillar.accent}`
+      }`}>
         <img
-          src={pillar.image}
-          alt=""
-          className="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-overlay"
-          aria-hidden="true"
+          src={imageSrc}
+          alt={pillar.title}
+          onError={() => {
+            if (pillar.imageFallback && imageSrc !== pillar.imageFallback) {
+              setImageSrc(pillar.imageFallback)
+            }
+          }}
+          className={`absolute inset-0 w-full h-full object-cover ${
+            isPhoto ? '' : 'opacity-30 mix-blend-overlay'
+          }`}
         />
-        <div className="absolute inset-0 flex flex-col justify-end p-8 text-white">
-          <div className="w-16 h-16 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center mb-4">
-            <Icon className="w-8 h-8" />
+        <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-akf-primary-soft/90 to-transparent pointer-events-none" />
+        <div className="absolute inset-0 flex flex-col justify-end p-8">
+          <div className="w-16 h-16 rounded-2xl bg-white/30 backdrop-blur-sm flex items-center justify-center mb-4">
+            <Icon className="w-8 h-8 text-akf-primary-dark" />
           </div>
-          <h2 className="text-2xl md:text-3xl font-bold text-white">{pillar.title}</h2>
-          <p className="text-gray-100 mt-2 text-sm font-medium">{pillar.sdgs.join(' · ')}</p>
+          <h2 className="text-2xl md:text-3xl font-bold text-akf-primary-dark">{pillar.title}</h2>
+          <p className="text-akf-primary mt-2 text-sm font-semibold">{pillar.sdgs.join(' · ')}</p>
         </div>
       </div>
 

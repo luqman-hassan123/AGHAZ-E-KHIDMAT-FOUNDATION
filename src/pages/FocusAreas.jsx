@@ -11,7 +11,6 @@ export default function FocusAreas() {
       <PageHero
         title="Thematic Focus Areas"
         subtitle="Six programme pillars with detailed activities, SDG alignment, and community interventions across Khyber Pakhtunkhwa"
-        image="/images/malakand.svg"
       />
       <SectionDivider />
 

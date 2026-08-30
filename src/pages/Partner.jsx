@@ -17,7 +17,6 @@ export default function Partner() {
       <PageHero
         title="Partner With AKF"
         subtitle="Join us in delivering measurable, sustainable results across Khyber Pakhtunkhwa"
-        image="/images/malakand.svg"
       />
       <SectionDivider />
 

@@ -12,7 +12,6 @@ export default function Contact() {
       <PageHero
         title="Contact Us"
         subtitle="We welcome the opportunity to discuss how AKF can support your programming objectives"
-        image="/images/community.svg"
       />
       <SectionDivider />
 

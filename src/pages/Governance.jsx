@@ -22,8 +22,17 @@ export default function Governance() {
               <p className="text-gray-700 mb-6 leading-relaxed">
                 AKF is governed by an Executive Committee (day-to-day steward) and a General Body (ultimate authority over budgets, audited accounts and major appointments).
               </p>
-              <div className="overflow-x-auto">
-                <table className="w-full">
+              <div className="space-y-4 md:hidden">
+                {executiveCommitteeNamed.map((row) => (
+                  <div key={row.position} className="rounded-xl border border-akf-steampunk bg-white p-4">
+                    <p className="font-semibold text-akf-primary-dark">{row.position}</p>
+                    <p className="text-gray-900 font-medium mt-1">{row.name}</p>
+                    <p className="text-gray-700 text-sm mt-2">{row.role}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="hidden md:block overflow-x-auto">
+                <table className="w-full min-w-[640px]">
                   <thead>
                     <tr className="bg-akf-primary text-white">
                       <th className="px-4 py-3 text-left rounded-tl-lg">Position</th>
@@ -34,7 +43,7 @@ export default function Governance() {
                   <tbody>
                     {executiveCommitteeNamed.map((row, i) => (
                       <tr key={row.position} className={i % 2 === 0 ? 'bg-white' : 'bg-akf-steampunk-light'}>
-                        <td className="px-4 py-4 font-semibold text-akf-primary-dark align-top whitespace-nowrap">{row.position}</td>
+                        <td className="px-4 py-4 font-semibold text-akf-primary-dark align-top">{row.position}</td>
                         <td className="px-4 py-4 text-gray-900 font-medium align-top">{row.name}</td>
                         <td className="px-4 py-4 text-gray-700">{row.role}</td>
                       </tr>

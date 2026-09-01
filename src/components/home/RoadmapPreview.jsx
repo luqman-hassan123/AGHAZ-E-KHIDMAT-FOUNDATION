@@ -5,7 +5,7 @@ import { strategicPriorities } from '../../data/governance'
 
 export default function RoadmapPreview() {
   return (
-    <section className="py-24 relative overflow-hidden bg-akf-steampunk-light">
+    <section className="py-14 md:py-24 relative overflow-hidden bg-akf-steampunk-light">
       <img
         src="/images/backgrounds/akf-drm-school-safety.png"
         alt=""
@@ -15,7 +15,7 @@ export default function RoadmapPreview() {
       <div className="absolute inset-0 bg-akf-steampunk-light/88" />
       <div className="absolute inset-0 section-pattern opacity-40" />
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <SectionHeading
           title="Our First-Phase Roadmap"
           subtitle="From strong governance foundation to demonstrated field results"
@@ -38,7 +38,7 @@ export default function RoadmapPreview() {
               <div className="hidden md:block md:w-1/2" />
               <div className="absolute left-6 md:left-1/2 w-4 h-4 rounded-full bg-akf-primary border-4 border-white shadow-md md:-translate-x-1/2 top-6 hidden sm:block" />
 
-              <div className="md:w-1/2 pl-14 sm:pl-0">
+              <div className="md:w-1/2 pl-14 md:pl-0">
                 <div className="bg-white rounded-2xl p-6 border border-akf-steampunk shadow-sm hover:border-akf-primary hover:shadow-md transition-all duration-300">
                   <span className="inline-block px-3 py-1 rounded-full bg-akf-primary-soft text-akf-primary-dark text-xs font-bold mb-3">
                     Step {index + 1}

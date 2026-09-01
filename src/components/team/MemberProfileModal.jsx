@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { createPortal } from 'react-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Mail, Phone, X } from 'lucide-react'
 import MemberAvatar from '../ui/MemberAvatar'
@@ -20,11 +21,11 @@ export default function MemberProfileModal({ member, onClose }) {
     }
   }, [member, onClose])
 
-  return (
+  return createPortal(
     <AnimatePresence>
       {member && (
         <motion.div
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6"
+          className="fixed inset-0 z-[100] flex items-end sm:items-center justify-center p-0 sm:p-4 md:p-6"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -44,25 +45,25 @@ export default function MemberProfileModal({ member, onClose }) {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 24, scale: 0.98 }}
             transition={{ duration: 0.25 }}
-            className="relative z-10 w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-2xl bg-white shadow-2xl border border-akf-steampunk"
+            className="relative z-10 w-full sm:max-w-3xl max-h-[92vh] sm:max-h-[90vh] overflow-y-auto overscroll-contain rounded-t-2xl sm:rounded-2xl bg-white shadow-2xl border border-akf-steampunk"
             onClick={(event) => event.stopPropagation()}
           >
             <button
               type="button"
               onClick={onClose}
-              className="absolute top-4 right-4 z-20 rounded-full p-2 text-gray-500 hover:text-akf-primary-dark hover:bg-akf-primary-soft transition-colors"
+              className="absolute top-3 right-3 sm:top-4 sm:right-4 z-20 flex h-11 w-11 items-center justify-center rounded-full text-gray-500 hover:text-akf-primary-dark hover:bg-akf-primary-soft transition-colors"
               aria-label="Close profile"
             >
               <X className="w-5 h-5" />
             </button>
 
-            <div className="p-6 sm:p-8">
-              <div className="flex gap-4 sm:gap-5 pr-8">
-                <div className="relative w-24 sm:w-28 aspect-[3/4] shrink-0 overflow-hidden rounded-xl bg-akf-primary-soft border border-akf-steampunk">
+            <div className="p-5 sm:p-8">
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 pr-10 sm:pr-8">
+                <div className="relative mx-auto sm:mx-0 w-24 sm:w-28 aspect-[3/4] shrink-0 overflow-hidden rounded-xl bg-akf-primary-soft border border-akf-steampunk">
                   <MemberAvatar member={member} />
                 </div>
 
-                <div className="min-w-0">
+                <div className="min-w-0 text-center sm:text-left">
                   <p className="text-akf-primary-dark text-xs font-semibold uppercase tracking-wider mb-1">
                     {member.role}
                   </p>
@@ -77,49 +78,50 @@ export default function MemberProfileModal({ member, onClose }) {
 
               <p className="text-gray-700 text-sm leading-relaxed mt-5">{member.bio}</p>
 
-                {(member.phoneDisplay || member.emails?.length > 0) && (
-                  <ul className="space-y-2 mt-5 text-sm">
-                    {member.phoneDisplay && (
-                      <li>
-                        <a
-                          href={`tel:+92${member.phone?.replace(/^0/, '')}`}
-                          className="inline-flex items-center gap-2 text-gray-700 hover:text-akf-primary-dark transition-colors"
-                        >
-                          <Phone className="w-4 h-4 text-akf-primary shrink-0" />
-                          {member.phoneDisplay}
-                        </a>
-                      </li>
-                    )}
-                    {member.emails?.map((email) => (
-                      <li key={email}>
-                        <a
-                          href={`mailto:${email}`}
-                          className="inline-flex items-start gap-2 text-gray-700 hover:text-akf-primary-dark transition-colors break-all"
-                        >
-                          <Mail className="w-4 h-4 text-akf-primary shrink-0 mt-0.5" />
-                          {email}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-
-                {(member.expertise ?? []).length > 0 && (
-                  <div className="flex flex-wrap gap-2 mt-5">
-                    {(member.expertise ?? []).map((skill) => (
-                      <span
-                        key={skill}
-                        className="px-2.5 py-1 rounded-md bg-akf-primary-soft text-akf-primary-dark text-xs font-medium"
+              {(member.phoneDisplay || member.emails?.length > 0) && (
+                <ul className="space-y-2 mt-5 text-sm">
+                  {member.phoneDisplay && (
+                    <li>
+                      <a
+                        href={`tel:+92${member.phone?.replace(/^0/, '')}`}
+                        className="inline-flex items-center gap-2 text-gray-700 hover:text-akf-primary-dark transition-colors"
                       >
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                )}
+                        <Phone className="w-4 h-4 text-akf-primary shrink-0" />
+                        {member.phoneDisplay}
+                      </a>
+                    </li>
+                  )}
+                  {member.emails?.map((email) => (
+                    <li key={email}>
+                      <a
+                        href={`mailto:${email}`}
+                        className="inline-flex items-start gap-2 text-gray-700 hover:text-akf-primary-dark transition-colors break-all"
+                      >
+                        <Mail className="w-4 h-4 text-akf-primary shrink-0 mt-0.5" />
+                        {email}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              )}
+
+              {(member.expertise ?? []).length > 0 && (
+                <div className="flex flex-wrap gap-2 mt-5">
+                  {(member.expertise ?? []).map((skill) => (
+                    <span
+                      key={skill}
+                      className="px-2.5 py-1 rounded-md bg-akf-primary-soft text-akf-primary-dark text-xs font-medium"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              )}
             </div>
           </motion.div>
         </motion.div>
       )}
-    </AnimatePresence>
+    </AnimatePresence>,
+    document.body,
   )
 }

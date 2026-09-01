@@ -8,7 +8,7 @@ import { orgContact } from '../../data/contact'
 export default function Footer() {
   return (
     <footer className="bg-akf-primary-dark text-gray-100">
-      <div className="container mx-auto px-6 py-12">
+      <div className="container mx-auto px-4 sm:px-6 py-10 sm:py-12">
         <div className="grid md:grid-cols-3 gap-8">
           <div>
             <BrandLockup variant="dark" largeLogo className="mb-4" />
@@ -33,7 +33,7 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-4">Contact</h4>
             <ul className="space-y-3">
-              <li className="flex items-start gap-2">
+              <li className="flex items-start gap-2 break-words">
                 <MapPin size={18} className="mt-1 shrink-0" />
                 <span>{orgContact.address}</span>
               </li>

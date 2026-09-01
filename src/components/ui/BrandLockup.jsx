@@ -14,7 +14,7 @@ export default function BrandLockup({ variant = 'light', className = '', showTag
     : 'text-base sm:text-lg leading-tight'
 
   return (
-    <div className={`flex items-center gap-2 sm:gap-2.5 overflow-visible ${className}`}>
+    <div className={`flex items-center gap-2 sm:gap-2.5 min-w-0 ${className}`}>
       <div
         className={`${frameClass} shrink-0 relative overflow-hidden rounded-full bg-white`}
       >
@@ -25,7 +25,7 @@ export default function BrandLockup({ variant = 'light', className = '', showTag
         />
       </div>
 
-      <div className="min-w-0 overflow-visible">
+      <div className="min-w-0">
         <p
           className={`font-bold ${titleClass} ${
             isDark ? 'text-white' : 'text-akf-primary-dark'

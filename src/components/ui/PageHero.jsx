@@ -6,7 +6,7 @@ export default function PageHero({ title, subtitle, image = defaultPageHeroImage
   const isPhoto = /\.(jpe?g|png|webp)$/i.test(image)
 
   return (
-    <section className="relative -mt-[4.75rem] pt-[5.25rem] md:pt-24 min-h-[280px] md:min-h-[320px] flex items-end overflow-hidden bg-akf-primary-dark">
+    <section className="relative -mt-20 sm:-mt-[4.75rem] pt-24 sm:pt-[5.25rem] md:pt-24 min-h-[220px] sm:min-h-[280px] md:min-h-[320px] flex items-end overflow-hidden bg-akf-primary-dark">
       <img
         src={image}
         alt=""
@@ -24,11 +24,11 @@ export default function PageHero({ title, subtitle, image = defaultPageHeroImage
       />
       <div className="absolute inset-0 section-pattern opacity-20" />
 
-      <div className="container mx-auto px-6 pb-12 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 pb-8 sm:pb-12 relative z-10">
         <motion.h1
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-4xl md:text-5xl font-extrabold text-white max-w-3xl"
+          className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white max-w-3xl leading-tight"
         >
           {title}
         </motion.h1>
@@ -37,7 +37,7 @@ export default function PageHero({ title, subtitle, image = defaultPageHeroImage
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.15 }}
-            className="text-gray-100 text-lg md:text-xl mt-4 max-w-2xl leading-relaxed"
+            className="text-gray-100 text-base sm:text-lg md:text-xl mt-3 sm:mt-4 max-w-2xl leading-relaxed"
           >
             {subtitle}
           </motion.p>

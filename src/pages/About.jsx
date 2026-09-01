@@ -35,7 +35,7 @@ export default function About() {
               </div>
             </AnimatedSection>
             <AnimatedSection delay={0.1}>
-              <div className="grid sm:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                 {aboutGallery.map((item) => (
                   <figure
                     key={item.src}
@@ -138,12 +138,20 @@ export default function About() {
           <AnimatedSection>
             <Card>
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Legal Status</h3>
-              <div className="overflow-x-auto">
+              <div className="space-y-4 md:hidden">
+                {legalStatus.map((item) => (
+                  <div key={item.label} className="border-b border-akf-steampunk pb-4 last:border-0">
+                    <p className="font-semibold text-akf-primary-dark">{item.label}</p>
+                    <p className="text-gray-700 mt-1">{item.value}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="hidden md:block overflow-x-auto">
                 <table className="w-full text-left">
                   <tbody>
                     {legalStatus.map((item) => (
                       <tr key={item.label} className="border-b border-akf-steampunk last:border-0">
-                        <td className="py-4 pr-6 font-semibold text-akf-primary-dark whitespace-nowrap">{item.label}</td>
+                        <td className="py-4 pr-6 font-semibold text-akf-primary-dark align-top w-48">{item.label}</td>
                         <td className="py-4 text-gray-700">{item.value}</td>
                       </tr>
                     ))}

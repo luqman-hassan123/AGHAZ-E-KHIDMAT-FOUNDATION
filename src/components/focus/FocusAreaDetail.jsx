@@ -32,16 +32,16 @@ export default function FocusAreaDetail({ pillar, index, reverse = false }) {
           }`}
         />
         <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-akf-primary-soft/90 to-transparent pointer-events-none" />
-        <div className="absolute inset-0 flex flex-col justify-end p-8">
-          <div className="w-16 h-16 rounded-2xl bg-white/30 backdrop-blur-sm flex items-center justify-center mb-4">
-            <Icon className="w-8 h-8 text-akf-primary-dark" />
+        <div className="absolute inset-0 flex flex-col justify-end p-5 sm:p-8">
+          <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-white/30 backdrop-blur-sm flex items-center justify-center mb-3 sm:mb-4">
+            <Icon className="w-7 h-7 sm:w-8 sm:h-8 text-akf-primary-dark" />
           </div>
-          <h2 className="text-2xl md:text-3xl font-bold text-akf-primary-dark">{pillar.title}</h2>
-          <p className="text-akf-primary mt-2 text-sm font-semibold">{pillar.sdgs.join(' · ')}</p>
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-akf-primary-dark leading-snug">{pillar.title}</h2>
+          <p className="text-akf-primary mt-2 text-xs sm:text-sm font-semibold break-words">{pillar.sdgs.join(' · ')}</p>
         </div>
       </div>
 
-      <div className={`p-8 md:p-10 flex flex-col justify-center ${reverse ? 'lg:order-1' : ''}`}>
+      <div className={`p-5 sm:p-8 md:p-10 flex flex-col justify-center ${reverse ? 'lg:order-1' : ''}`}>
         <span className="text-akf-primary font-bold text-sm tracking-wide uppercase">
           Pillar {String(index + 1).padStart(2, '0')}
         </span>

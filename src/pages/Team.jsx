@@ -18,19 +18,19 @@ export default function Team() {
       />
       <SectionDivider />
 
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-6">
-          <AnimatedSection className="mb-12">
+      <section className="py-14 md:py-20 bg-white">
+        <div className="container mx-auto px-4 sm:px-6">
+          <AnimatedSection className="mb-8 sm:mb-12">
             <SectionHeading
               title="Our Founding Team"
               subtitle="Seven dedicated professionals combining legal governance with grassroots community experience"
             />
-            <p className="text-center text-gray-700 max-w-3xl mx-auto -mt-6 leading-relaxed">
+            <p className="text-center text-gray-700 max-w-3xl mx-auto mt-4 leading-relaxed">
               The founding members form the initial Executive Committee for a term of three years, after which office bearers are elected by the General Body through secret ballot. Male and female members are shown with distinct placeholder icons until official photos are added.
             </p>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8 items-start">
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-8 items-start">
             {foundingMembers.map((member, index) => (
               <MemberProfileCard
                 key={member.id}
@@ -47,4 +47,4 @@ export default function Team() {
     </>
   )
 }
-
+

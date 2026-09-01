@@ -14,8 +14,8 @@ export default function FocusAreas() {
       />
       <SectionDivider />
 
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-6">
+      <section className="py-12 md:py-16 bg-white">
+        <div className="container mx-auto px-4 sm:px-6">
           <AnimatedSection>
             <Card className="bg-akf-primary-soft border-akf-primary/20 max-w-4xl mx-auto text-center">
               <p className="text-gray-700 leading-relaxed">
@@ -26,8 +26,8 @@ export default function FocusAreas() {
         </div>
       </section>
 
-      <section className="py-12 bg-akf-steampunk-light section-pattern">
-        <div className="container mx-auto px-6 space-y-12">
+      <section className="py-10 md:py-12 bg-akf-steampunk-light section-pattern">
+        <div className="container mx-auto px-4 sm:px-6 space-y-8 md:space-y-12">
           {pillars.map((pillar, index) => (
             <FocusAreaDetail
               key={pillar.id}

@@ -7,7 +7,7 @@ export default function PillarsPreview() {
   const preview = pillars.slice(0, 3)
 
   return (
-    <section className="py-24 relative overflow-hidden bg-akf-primary-soft">
+    <section className="py-14 md:py-24 relative overflow-hidden bg-akf-primary-soft">
       <img
         src="/images/backgrounds/akf-wash-school-hygiene.png"
         alt=""
@@ -17,7 +17,7 @@ export default function PillarsPreview() {
       <div className="absolute inset-0 bg-akf-primary-soft/88" />
       <div className="absolute inset-0 section-pattern opacity-40" />
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <SectionHeading
           title="Thematic Focus Areas"
           subtitle="Six pillars aligned with national priorities and UN Sustainable Development Goals"

@@ -8,8 +8,8 @@ export default function TeamPreview() {
   const preview = foundingMembers.slice(0, 4)
 
   return (
-    <section className="py-24 bg-white section-pattern">
-      <div className="container mx-auto px-6">
+    <section className="py-14 md:py-24 bg-white section-pattern">
+      <div className="container mx-auto px-4 sm:px-6">
         <SectionHeading
           title="Meet Our Founding Team"
           subtitle="Lawyers and social workers committed to community welfare in Malakand Division"

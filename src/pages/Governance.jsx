@@ -15,14 +15,14 @@ export default function Governance() {
       />
       <SectionDivider />
 
-      <div className="py-20 bg-akf-steampunk-light min-h-screen section-pattern">
-        <div className="container mx-auto px-6">
+      <div className="py-14 md:py-20 bg-akf-steampunk-light min-h-screen section-pattern">
+        <div className="container mx-auto px-4 sm:px-6">
           <AnimatedSection className="mb-12">
             <Card>
               <p className="text-gray-700 mb-6 leading-relaxed">
                 AKF is governed by an Executive Committee (day-to-day steward) and a General Body (ultimate authority over budgets, audited accounts and major appointments).
               </p>
-              <div className="space-y-4 md:hidden">
+              <div className="space-y-4 lg:hidden">
                 {executiveCommitteeNamed.map((row) => (
                   <div key={row.position} className="rounded-xl border border-akf-steampunk bg-white p-4">
                     <p className="font-semibold text-akf-primary-dark">{row.position}</p>
@@ -31,8 +31,8 @@ export default function Governance() {
                   </div>
                 ))}
               </div>
-              <div className="hidden md:block overflow-x-auto">
-                <table className="w-full min-w-[640px]">
+              <div className="hidden lg:block overflow-x-auto">
+                <table className="w-full">
                   <thead>
                     <tr className="bg-akf-primary text-white">
                       <th className="px-4 py-3 text-left rounded-tl-lg">Position</th>
@@ -56,7 +56,7 @@ export default function Governance() {
 
           <AnimatedSection>
             <Card>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Financial Accountability</h3>
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6">Financial Accountability</h3>
               <ul className="space-y-4">
                 {accountabilityPoints.map((point) => (
                   <li key={point} className="flex items-start gap-3">

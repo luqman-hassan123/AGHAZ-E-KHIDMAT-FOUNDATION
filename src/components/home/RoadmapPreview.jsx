@@ -38,8 +38,8 @@ export default function RoadmapPreview() {
               <div className="hidden md:block md:w-1/2" />
               <div className="absolute left-6 md:left-1/2 w-4 h-4 rounded-full bg-akf-primary border-4 border-white shadow-md md:-translate-x-1/2 top-6 hidden sm:block" />
 
-              <div className="md:w-1/2 pl-14 md:pl-0">
-                <div className="bg-white rounded-2xl p-6 border border-akf-steampunk shadow-sm hover:border-akf-primary hover:shadow-md transition-all duration-300">
+              <div className="md:w-1/2 pl-0 sm:pl-14 md:pl-0">
+                <div className="bg-white rounded-2xl p-4 sm:p-6 border border-akf-steampunk shadow-sm card-interactive">
                   <span className="inline-block px-3 py-1 rounded-full bg-akf-primary-soft text-akf-primary-dark text-xs font-bold mb-3">
                     Step {index + 1}
                   </span>

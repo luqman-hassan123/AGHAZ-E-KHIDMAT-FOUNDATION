@@ -1,10 +1,11 @@
 import { motion } from 'framer-motion'
 import Button from '../ui/Button'
+import AnimatedCounter from '../ui/AnimatedCounter'
 import { orgStats } from '../../data/home'
 
 export default function Hero() {
   return (
-    <section className="-mt-20 sm:-mt-[4.75rem] pt-24 sm:pt-[5.25rem] md:pt-24 pb-10 sm:pb-14 bg-akf-primary-dark relative overflow-hidden">
+    <section className="-mt-[4.75rem] sm:-mt-20 pt-[5.5rem] sm:pt-24 pb-10 sm:pb-14 bg-akf-primary-dark relative overflow-hidden">
       <img
         src="/images/backgrounds/hero1.png"
         alt=""
@@ -59,7 +60,7 @@ export default function Hero() {
           {['Education', 'Health & WASH', 'Disaster Response', 'Environment', 'Community Development'].map((tag) => (
             <span
               key={tag}
-              className="px-3 py-1 rounded-full bg-white/20 text-white text-sm font-medium border border-white/30"
+              className="px-2.5 sm:px-3 py-1 rounded-full bg-white/20 text-white text-xs sm:text-sm font-medium border border-white/30 transition-all duration-300 hover:bg-white/35 hover:border-white/60 hover:scale-105"
             >
               {tag}
             </span>
@@ -89,9 +90,11 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.9 + index * 0.08 }}
-              className="bg-white rounded-2xl border border-akf-steampunk p-4 sm:p-5 md:p-6 text-center shadow-lg hover:border-akf-primary hover:shadow-xl transition-all duration-300"
+              className="group bg-white rounded-2xl border border-akf-steampunk p-4 sm:p-5 md:p-6 text-center shadow-lg card-interactive"
             >
-              <p className="text-xl sm:text-2xl md:text-3xl font-extrabold text-akf-primary-dark">{stat.value}</p>
+              <p className="text-xl sm:text-2xl md:text-3xl font-extrabold text-akf-primary-dark transition-colors duration-300 group-hover:text-akf-primary">
+                <AnimatedCounter value={stat.value} />
+              </p>
               <p className="font-semibold text-gray-800 mt-2 text-xs sm:text-sm">{stat.label}</p>
               <p className="text-gray-700 text-xs mt-1 font-medium">{stat.description}</p>
             </motion.div>

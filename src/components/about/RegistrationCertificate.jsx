@@ -7,14 +7,14 @@ export default function RegistrationCertificate() {
   return (
     <Card className="overflow-hidden p-0">
       <div className="grid lg:grid-cols-2 gap-0">
-        <div className="p-8 md:p-10">
-          <div className="flex items-center gap-3 mb-4">
-            <div className="w-12 h-12 rounded-full bg-akf-primary flex items-center justify-center">
+        <div className="p-5 sm:p-8 md:p-10">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-3 mb-4">
+            <div className="w-12 h-12 rounded-full bg-akf-primary flex items-center justify-center shrink-0">
               <ShieldCheck className="w-6 h-6 text-white" />
             </div>
-            <div>
+            <div className="min-w-0">
               <p className="text-akf-primary-dark font-bold text-sm uppercase tracking-wide">Official Registration</p>
-              <h3 className="text-2xl font-bold text-gray-900">Certificate of Registration</h3>
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900">Certificate of Registration</h3>
             </div>
           </div>
 
@@ -49,7 +49,7 @@ export default function RegistrationCertificate() {
           initial={{ opacity: 0, scale: 0.98 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="bg-akf-steampunk-light p-6 flex items-center justify-center border-t lg:border-t-0 lg:border-l border-akf-steampunk"
+          className="bg-akf-steampunk-light p-4 sm:p-6 flex items-center justify-center border-t lg:border-t-0 lg:border-l border-akf-steampunk"
         >
           <a
             href="/images/documents/registration-certificate.png"

@@ -22,7 +22,7 @@ export default function PillarsPreview() {
           title="Thematic Focus Areas"
           subtitle="Six pillars aligned with national priorities and UN Sustainable Development Goals"
         />
-        <div className="grid md:grid-cols-3 gap-6 mb-10">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 mb-10">
           {preview.map((pillar, index) => (
             <PillarCard key={pillar.title} pillar={pillar} index={index} />
           ))}

@@ -5,15 +5,15 @@ import { partnerReasons } from '../../data/governance'
 
 export default function PartnerCTA() {
   return (
-    <section className="py-20 bg-akf-primary">
-      <div className="container mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+    <section className="py-14 md:py-20 bg-akf-primary">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
               Why Partner With AKF?
             </h2>
             <p className="text-white text-lg mb-6 leading-relaxed">
@@ -29,7 +29,7 @@ export default function PartnerCTA() {
             className="space-y-4"
           >
             {partnerReasons.slice(0, 4).map((reason) => (
-              <li key={reason} className="flex items-start gap-3 text-white">
+              <li key={reason} className="flex items-start gap-3 text-white transition-all duration-300 hover:translate-x-1">
                 <CheckCircle className="w-5 h-5 mt-1 shrink-0 text-white" />
                 <span>{reason}</span>
               </li>

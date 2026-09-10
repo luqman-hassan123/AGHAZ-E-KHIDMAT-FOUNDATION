@@ -15,22 +15,22 @@ export default function Contact() {
       />
       <SectionDivider />
 
-      <div className="py-20 min-h-screen section-pattern">
-        <div className="container mx-auto px-6">
+      <div className="py-14 md:py-20 min-h-screen section-pattern">
+        <div className="container mx-auto px-4 sm:px-6">
           <AnimatedSection className="max-w-2xl mx-auto">
             <Card>
               <h3 className="text-xl font-bold mb-6">Organization Details</h3>
               <ul className="space-y-5">
                 <li className="flex items-start gap-3">
                   <MapPin className="w-5 h-5 text-akf-primary mt-1 shrink-0" />
-                  <div>
+                  <div className="min-w-0">
                     <p className="font-semibold">Address</p>
                     <p className="text-gray-700">{orgContact.address}</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
                   <User className="w-5 h-5 text-akf-primary mt-1 shrink-0" />
-                  <div>
+                  <div className="min-w-0">
                     <p className="font-semibold">{orgContact.chairperson.title}</p>
                     <p className="text-gray-700">{orgContact.chairperson.name}</p>
                     <a
@@ -54,7 +54,7 @@ export default function Contact() {
                 </li>
                 <li className="flex items-start gap-3">
                   <User className="w-5 h-5 text-akf-primary mt-1 shrink-0" />
-                  <div>
+                  <div className="min-w-0">
                     <p className="font-semibold">{orgContact.generalSecretary.title}</p>
                     <p className="text-gray-700">{orgContact.generalSecretary.name}</p>
                     <a
@@ -73,7 +73,7 @@ export default function Contact() {
                 </li>
                 <li className="flex items-start gap-3">
                   <LinkedInIcon className="w-5 h-5 text-akf-primary mt-1 shrink-0" />
-                  <div>
+                  <div className="min-w-0">
                     <p className="font-semibold">LinkedIn</p>
                     {orgContact.linkedIn.url ? (
                       <a

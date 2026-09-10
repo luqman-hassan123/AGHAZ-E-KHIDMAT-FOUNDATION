@@ -1,7 +1,7 @@
 export const orgStats = [
-  { value: '6', label: 'Thematic Focus Areas', description: 'Aligned with UN SDGs' },
-  { value: '7', label: 'Founding Members', description: 'Lawyers & social workers' },
-  { value: '1056', label: 'Registration No.', description: 'Societies Act 1860' },
+  { value: 6, label: 'Thematic Focus Areas', description: 'Aligned with UN SDGs' },
+  { value: 7, label: 'Founding Members', description: 'Lawyers & social workers' },
+  { value: 1056, label: 'Registration No.', description: 'Societies Act 1860' },
   { value: 'KP', label: 'Province Coverage', description: 'Khyber Pakhtunkhwa' },
 ]
 

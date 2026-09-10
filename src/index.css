@@ -53,3 +53,15 @@ h4 {
   background-image: radial-gradient(circle at 1px 1px, rgba(61, 139, 122, 0.08) 1px, transparent 0);
   background-size: 24px 24px;
 }
+
+.card-interactive {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+@media (hover: hover) {
+  .card-interactive:hover {
+    border-color: var(--color-akf-primary);
+    box-shadow: 0 20px 40px -12px rgb(42 107 92 / 0.22);
+    transform: translateY(-4px);
+  }
+}

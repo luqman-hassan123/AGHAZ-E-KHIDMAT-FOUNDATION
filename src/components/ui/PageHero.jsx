@@ -6,7 +6,7 @@ export default function PageHero({ title, subtitle, image = defaultPageHeroImage
   const isPhoto = /\.(jpe?g|png|webp)$/i.test(image)
 
   return (
-    <section className="relative -mt-20 sm:-mt-[4.75rem] pt-24 sm:pt-[5.25rem] md:pt-24 min-h-[220px] sm:min-h-[280px] md:min-h-[320px] flex items-end overflow-hidden bg-akf-primary-dark">
+    <section className="relative -mt-[4.75rem] sm:-mt-20 pt-[5.5rem] sm:pt-24 min-h-[200px] sm:min-h-[280px] md:min-h-[320px] flex items-end overflow-hidden bg-akf-primary-dark">
       <img
         src={image}
         alt=""

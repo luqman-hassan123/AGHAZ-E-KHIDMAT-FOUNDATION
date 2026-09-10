@@ -7,8 +7,8 @@ const icons = [ShieldCheck, Lock, FileCheck, Globe]
 
 export default function TrustSection() {
   return (
-    <section className="py-24 bg-white">
-      <div className="container mx-auto px-6">
+    <section className="py-14 md:py-24 bg-white">
+      <div className="container mx-auto px-4 sm:px-6">
         <SectionHeading
           title="Built for Donor Confidence"
           subtitle="Governance, financial controls, and accountability you can rely on"
@@ -23,7 +23,7 @@ export default function TrustSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="text-center p-6 rounded-2xl bg-akf-steampunk-light border border-akf-steampunk hover:bg-akf-primary-soft hover:border-akf-primary transition-all duration-300 group"
+                className="text-center p-4 sm:p-6 rounded-2xl bg-akf-steampunk-light border border-akf-steampunk hover:bg-akf-primary-soft hover:border-akf-primary transition-all duration-300 group card-interactive"
               >
                 <div className="w-14 h-14 mx-auto rounded-full bg-white group-hover:bg-akf-primary flex items-center justify-center mb-4 transition-colors duration-300">
                   <Icon className="w-7 h-7 text-akf-primary-dark group-hover:text-white transition-colors duration-300" />

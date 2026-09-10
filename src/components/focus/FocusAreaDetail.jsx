@@ -14,9 +14,9 @@ export default function FocusAreaDetail({ pillar, index, reverse = false }) {
       viewport={{ once: true, margin: '-60px' }}
       transition={{ duration: 0.6 }}
       id={pillar.id}
-      className={`grid lg:grid-cols-2 gap-0 overflow-hidden rounded-3xl border border-akf-steampunk shadow-md bg-white transition-[border-color,box-shadow] duration-300 hover:border-akf-primary hover:shadow-lg`}
+      className={`grid lg:grid-cols-2 gap-0 overflow-hidden rounded-2xl sm:rounded-3xl border border-akf-steampunk shadow-md bg-white transition-[border-color,box-shadow] duration-300 hover:border-akf-primary hover:shadow-lg`}
     >
-      <div className={`relative min-h-[260px] lg:min-h-[420px] ${reverse ? 'lg:order-2' : ''} ${
+      <div className={`relative min-h-[220px] sm:min-h-[260px] lg:min-h-[420px] ${reverse ? 'lg:order-2' : ''} ${
         isPhoto ? 'bg-akf-primary-soft' : `bg-gradient-to-br ${pillar.accent}`
       }`}>
         <img

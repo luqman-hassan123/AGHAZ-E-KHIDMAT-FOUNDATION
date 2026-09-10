@@ -20,11 +20,11 @@ export default function Partner() {
       />
       <SectionDivider />
 
-    <div className="py-20 bg-akf-steampunk-light min-h-screen section-pattern">
-      <div className="container mx-auto px-6">
+    <div className="py-14 md:py-20 bg-akf-steampunk-light min-h-screen section-pattern">
+      <div className="container mx-auto px-4 sm:px-6">
         <AnimatedSection className="mb-12">
           <Card>
-            <h3 className="text-2xl font-bold mb-6">Why Partner With Us</h3>
+            <h3 className="text-xl sm:text-2xl font-bold mb-6">Why Partner With Us</h3>
             <ul className="space-y-4">
               {partnerReasons.map((reason) => (
                 <li key={reason} className="flex items-start gap-3">
@@ -37,8 +37,8 @@ export default function Partner() {
         </AnimatedSection>
 
         <AnimatedSection className="mb-12">
-          <h3 className="text-2xl font-bold text-center mb-8">Strategic Priorities — First Phase</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <h3 className="text-xl sm:text-2xl font-bold text-center mb-8">Strategic Priorities — First Phase</h3>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {strategicPriorities.map((item, index) => (
               <Card key={item.title} className="border-t-4 border-t-akf-primary">
                 <span className="text-akf-primary font-bold text-sm">0{index + 1}</span>

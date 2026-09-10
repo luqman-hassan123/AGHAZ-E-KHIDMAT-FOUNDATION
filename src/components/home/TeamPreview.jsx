@@ -17,9 +17,9 @@ export default function TeamPreview() {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
           {preview.map((member) => (
-            <Card key={member.id} className="overflow-hidden p-0 text-center h-full">
-              <div className="aspect-[3/4] w-full">
-                <MemberAvatar member={member} />
+            <Card key={member.id} className="overflow-hidden p-0 text-center h-full group">
+              <div className="aspect-[3/4] w-full overflow-hidden">
+                <MemberAvatar member={member} imageClassName="group-hover:scale-105" />
               </div>
               <div className="p-4">
                 <p className="text-akf-primary-dark text-xs font-semibold uppercase mb-1">{member.role}</p>
@@ -36,7 +36,7 @@ export default function TeamPreview() {
         <div className="text-center">
           <Link
             to="/team"
-            className="inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold bg-akf-primary hover:bg-akf-primary-dark text-white transition-colors"
+            className="inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold bg-akf-primary hover:bg-akf-primary-dark text-white transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5"
           >
             View Full Team Profiles
           </Link>

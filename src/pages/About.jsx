@@ -17,11 +17,11 @@ export default function About() {
       />
       <SectionDivider />
 
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <section className="py-14 md:py-20 bg-white">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <AnimatedSection>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Our Story</h2>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">Our Story</h2>
               <div className="w-16 h-1 bg-akf-primary mt-3 rounded-full" />
               <p className="mt-4 text-lg text-gray-700 mb-6">
                 A new beginning in service — rooted in Malakand Division
@@ -35,7 +35,7 @@ export default function About() {
               </div>
             </AnimatedSection>
             <AnimatedSection delay={0.1}>
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {aboutGallery.map((item) => (
                   <figure
                     key={item.src}
@@ -53,8 +53,8 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-20 bg-akf-primary-soft section-pattern">
-        <div className="container mx-auto px-6">
+      <section className="py-14 md:py-20 bg-akf-primary-soft section-pattern">
+        <div className="container mx-auto px-4 sm:px-6">
           <SectionHeading title="Vision & Mission" subtitle="The principles that guide every programme we design" />
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <AnimatedSection>
@@ -62,7 +62,7 @@ export default function About() {
                 <div className="w-14 h-14 rounded-full bg-akf-primary flex items-center justify-center mb-4">
                   <Eye className="w-7 h-7 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">Our Vision</h3>
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3">Our Vision</h3>
                 <p className="text-gray-700 leading-relaxed">
                   A Khyber Pakhtunkhwa in which every community has access to education, health, a safe environment and the means to build a dignified, self-reliant future.
                 </p>
@@ -73,7 +73,7 @@ export default function About() {
                 <div className="w-14 h-14 rounded-full bg-akf-primary-dark flex items-center justify-center mb-4">
                   <Target className="w-7 h-7 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">Our Mission</h3>
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3">Our Mission</h3>
                 <p className="text-gray-700 leading-relaxed">
                   To mobilize local and international resources to deliver education, health, disaster response, environmental and community-development programs that are transparent, community-driven and sustainable, with a particular focus on women, youth, children and other vulnerable groups.
                 </p>
@@ -83,8 +83,8 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-6">
+      <section className="py-14 md:py-20 bg-white">
+        <div className="container mx-auto px-4 sm:px-6">
           <SectionHeading title="Organizational Highlights" subtitle="What sets AKF apart as a partner and community organisation" />
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {orgHighlights.map((item, index) => (
@@ -102,19 +102,19 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-20 bg-akf-steampunk-light">
-        <div className="container mx-auto px-6">
+      <section className="py-14 md:py-20 bg-akf-steampunk-light">
+        <div className="container mx-auto px-4 sm:px-6">
           <SectionHeading title="Our Journey" subtitle="Key milestones in AKF's establishment and growth" />
           <div className="max-w-3xl mx-auto space-y-6">
             {orgTimeline.map((item, index) => (
               <AnimatedSection key={item.title} delay={index * 0.1}>
-                <div className="flex gap-6 items-start">
-                  <div className="shrink-0 w-16 text-center">
+                <div className="flex gap-3 sm:gap-6 items-start min-w-0">
+                  <div className="shrink-0 w-14 sm:w-16 text-center">
                     <span className="inline-block px-3 py-1 rounded-full bg-akf-primary text-white text-sm font-bold">
                       {item.year}
                     </span>
                   </div>
-                  <Card className="flex-1">
+                  <Card className="flex-1 min-w-0">
                     <h3 className="font-bold text-gray-900 mb-1">{item.title}</h3>
                     <p className="text-gray-700 text-sm">{item.description}</p>
                   </Card>
@@ -125,20 +125,20 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-20 bg-akf-steampunk-light section-pattern">
-        <div className="container mx-auto px-6">
+      <section className="py-14 md:py-20 bg-akf-steampunk-light section-pattern">
+        <div className="container mx-auto px-4 sm:px-6">
           <AnimatedSection>
             <RegistrationCertificate />
           </AnimatedSection>
         </div>
       </section>
 
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-6">
+      <section className="py-14 md:py-20 bg-white">
+        <div className="container mx-auto px-4 sm:px-6">
           <AnimatedSection>
             <Card>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Legal Status</h3>
-              <div className="space-y-4 md:hidden">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6">Legal Status</h3>
+              <div className="space-y-4 lg:hidden">
                 {legalStatus.map((item) => (
                   <div key={item.label} className="border-b border-akf-steampunk pb-4 last:border-0">
                     <p className="font-semibold text-akf-primary-dark">{item.label}</p>
@@ -146,13 +146,13 @@ export default function About() {
                   </div>
                 ))}
               </div>
-              <div className="hidden md:block overflow-x-auto">
+              <div className="hidden lg:block overflow-x-auto">
                 <table className="w-full text-left">
                   <tbody>
                     {legalStatus.map((item) => (
                       <tr key={item.label} className="border-b border-akf-steampunk last:border-0">
-                        <td className="py-4 pr-6 font-semibold text-akf-primary-dark align-top w-48">{item.label}</td>
-                        <td className="py-4 text-gray-700">{item.value}</td>
+                        <td className="py-4 pr-6 font-semibold text-akf-primary-dark align-top w-40 sm:w-48">{item.label}</td>
+                        <td className="py-4 text-gray-700 break-words">{item.value}</td>
                       </tr>
                     ))}
                   </tbody>

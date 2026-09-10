@@ -2,12 +2,10 @@ export default function BrandLockup({ variant = 'light', className = '', showTag
   const isDark = variant === 'dark'
 
   const frameClass = compact
-    ? 'h-[3.125rem] w-[3.125rem] sm:h-14 sm:w-14'
+    ? 'h-[3.25rem] w-[3.25rem] sm:h-[3.75rem] sm:w-[3.75rem]'
     : largeLogo
-      ? 'h-16 w-16 sm:h-20 sm:w-20'
-      : 'h-9 w-9 sm:h-11 sm:w-11'
-
-  const emblemClass = compact ? 'w-[175%] top-[3%]' : 'w-[170%] top-[3%]'
+      ? 'h-[4.5rem] w-[4.5rem] sm:h-24 sm:w-24'
+      : 'h-10 w-10 sm:h-12 sm:w-12'
 
   const titleClass = compact
     ? 'text-xs sm:text-base leading-tight'
@@ -16,12 +14,12 @@ export default function BrandLockup({ variant = 'light', className = '', showTag
   return (
     <div className={`flex items-center gap-2 sm:gap-2.5 min-w-0 ${className}`}>
       <div
-        className={`${frameClass} shrink-0 relative overflow-hidden rounded-full bg-white`}
+        className={`${frameClass} shrink-0 rounded-full overflow-hidden bg-white shadow-sm ring-1 ring-akf-primary/10`}
       >
         <img
           src="/images/akf-logo.png"
           alt="Aghaz-e-Khidmat Foundation"
-          className={`absolute left-1/2 -translate-x-1/2 max-w-none h-auto ${emblemClass}`}
+          className="h-full w-full object-cover object-center scale-[1.12]"
         />
       </div>
 

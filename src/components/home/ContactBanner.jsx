@@ -5,13 +5,13 @@ import { orgContact } from '../../data/contact'
 
 export default function ContactBanner() {
   return (
-    <section className="py-20 bg-white">
-      <div className="container mx-auto px-6">
+    <section className="py-14 md:py-20 bg-white">
+      <div className="container mx-auto px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-gradient-to-r from-akf-primary via-akf-primary-dark to-akf-primary rounded-3xl p-10 md:p-14 text-center text-white relative overflow-hidden"
+          className="bg-gradient-to-r from-akf-primary via-akf-primary-dark to-akf-primary rounded-3xl p-6 sm:p-10 md:p-14 text-center text-white relative overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-akf-primary/30"
         >
           <div className="absolute inset-0 opacity-20">
             <div className="absolute -top-10 -right-10 w-60 h-60 bg-white rounded-full blur-3xl" />
@@ -19,7 +19,7 @@ export default function ContactBanner() {
           </div>
 
           <div className="relative z-10 max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
               Ready to Make an Impact Together?
             </h2>
             <p className="text-white text-lg mb-8 leading-relaxed">

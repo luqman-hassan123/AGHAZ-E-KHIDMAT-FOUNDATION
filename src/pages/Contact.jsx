@@ -2,7 +2,7 @@ import PageHero from '../components/ui/PageHero'
 import SectionDivider from '../components/ui/SectionDivider'
 import AnimatedSection from '../components/ui/AnimatedSection'
 import Card from '../components/ui/Card'
-import { MapPin, User } from 'lucide-react'
+import { MapPin, User, Mail } from 'lucide-react'
 import LinkedInIcon from '../components/ui/LinkedInIcon'
 import { orgContact } from '../data/contact'
 
@@ -26,6 +26,18 @@ export default function Contact() {
                   <div className="min-w-0">
                     <p className="font-semibold">Address</p>
                     <p className="text-gray-700">{orgContact.address}</p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Mail className="w-5 h-5 text-akf-primary mt-1 shrink-0" />
+                  <div className="min-w-0">
+                    <p className="font-semibold">Organization Email</p>
+                    <a
+                      href={`mailto:${orgContact.organizationEmail}`}
+                      className="text-sm text-gray-700 hover:text-akf-primary-dark break-all"
+                    >
+                      {orgContact.organizationEmail}
+                    </a>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">

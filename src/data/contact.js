@@ -16,9 +16,10 @@ export const orgContact = {
   },
   primaryPhone: '03335333948',
   primaryPhoneDisplay: '0333 5333948',
-  primaryEmail: 'Mehrunisa.dgpc@gmail.com',
+  organizationEmail: 'aghazekhidmatfoundation@gmail.com',
+  primaryEmail: 'aghazekhidmatfoundation@gmail.com',
   linkedIn: {
-    label: 'LinkedIn Profile',
-    url: '', // Add AKF LinkedIn URL here when available
+    label: 'Aghaz-e-Khidmat Foundation',
+    url: 'https://www.linkedin.com/in/aghazekhidmat-foundation-6934a0437',
   },
 }
